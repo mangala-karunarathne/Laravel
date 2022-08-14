@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('/tasks', function(){
     return view('tasks');
 });
-
+ 
 // Route::get('/about-us', function(){
 //     return view('aboutus');
 // });
@@ -29,8 +29,7 @@ Route::get('/about-us','App\Http\Controllers\PageController@indexaboutus');
 // same rout output using controller instead of use routes directly 
 
 
-Route::get('/contact-us', function(){
-    return view('contactus');
-});
+Route::get('/contact-us','App\Http\Controllers\PageController@indexcontactus');
+// same rout output using controller instead of use routes directly 
 
 
