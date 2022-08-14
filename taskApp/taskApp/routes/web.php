@@ -24,3 +24,9 @@ Route::get('/tasks', function(){
 Route::get('/about-us', function(){
     return view('aboutus');
 });
+
+Route::get('/contact-us', function(){
+    return view('contactus');
+});
+
+
