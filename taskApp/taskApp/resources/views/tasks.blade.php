@@ -44,7 +44,19 @@
             <input type="text" class="form-control" name="task" placeholder="Enter Your Task Here">
             <br>
             <input type="button" class="btn btn-primary" value="SAVE">
-            <input type="button" class="btn btn-warning" value="CLEAR">   
+            <input type="button" class="btn btn-warning" value="CLEAR">  
+            <br> 
+            <br>
+            <table class="table table-dark">
+                <th>ID</th>
+                <th>Task</th>
+                <th>Completed</th>
+                <tr>
+                  <td>1</td>
+                  <td>I have to learn Laravel today</td>
+                  <td>Not yet Completed</td>
+                </tr>
+            </table>
         </div>
 
       </div>
