@@ -41,12 +41,16 @@
     <div class="container1">
       <div class="rows">
         <div class="col-md-12">
-            <input type="text" class="form-control" name="task" placeholder="Enter Your Task Here">
+          <form method="post" action="/savetask">
+          {{csrf_field()}}
+          <input type="text" class="form-control" name="task" placeholder="Enter Your Task Here">
             <br>
-            <input type="button" class="btn btn-primary" value="SAVE">
-            <input type="button" class="btn btn-warning" value="CLEAR">  
-            <br> 
-            <br>
+              <input type="submit" class="btn btn-primary" value="SAVE">
+              <input type="button" class="btn btn-warning" value="CLEAR">  
+                <br> 
+                <br>
+          </form>
+            
             <table class="table table-dark">
                 <th>ID</th>
                 <th>Task</th>
@@ -54,7 +58,7 @@
                 <tr>
                   <td>1</td>
                   <td>I have to learn Laravel today</td>
-                  <td>Not yet Completed</td>
+                  <td>Not yet</td>
                 </tr>
             </table>
         </div>

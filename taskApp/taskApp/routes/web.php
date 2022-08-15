@@ -32,4 +32,4 @@ Route::get('/about-us','App\Http\Controllers\PageController@indexaboutus');
 Route::get('/contact-us','App\Http\Controllers\PageController@indexcontactus');
 // same rout output using controller instead of use routes directly 
 
-
+Route::post('/savetask', 'App\Http\Controllers\TaskController@store');
