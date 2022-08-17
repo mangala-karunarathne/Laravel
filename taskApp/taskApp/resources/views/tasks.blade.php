@@ -25,9 +25,9 @@
       width: 100%;
       text-align: center;
       font-size: 18px;
-      margin: auto;
+      margin: 10px;
       width: 50%;
-      /* border: 3px solid #73AD21; */
+      /*border: 3px solid #73AD21; */
       padding: 10px;
     }
   </style>
@@ -38,6 +38,7 @@
             <h2> Daily Tasks</h2>
         </div>
     </div>
+    
     <div class="container1">
       <div class="rows">
         <div class="col-md-12">
