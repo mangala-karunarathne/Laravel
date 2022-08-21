@@ -17,8 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//$data=Tasks::all();
+
 Route::get('/tasks', function(){
-    return view('tasks');
+    return view('tasks')->with('tasks',$data);
 });
  
 // Route::get('/about-us', function(){
