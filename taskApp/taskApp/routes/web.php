@@ -20,7 +20,11 @@ Route::get('/', function () {
 //$data=Tasks::all();
 
 Route::get('/tasks', function(){
+$data = App\Models\Task::all();
+
     return view('tasks')->with('tasks',$data);
+
+
 });
  
 // Route::get('/about-us', function(){

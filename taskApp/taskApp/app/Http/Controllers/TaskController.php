@@ -18,7 +18,7 @@ class TaskController extends Controller
 
     //return redirect()->back();
     $data=Task::all(); 
-    dd($data);
+    //dd($data);
 
     return view('tasks')->with('tasks',$data);
    }
