@@ -40,4 +40,4 @@ Route::get('/contact-us','App\Http\Controllers\PageController@indexcontactus');
 
 Route::post('/savetask', 'App\Http\Controllers\TaskController@indexstore');
 
-Route::get('/markascompleted/{id}','App\Http\Controllers\TaskController@index');
+Route::get('/markascompleted/{id}','App\Http\Controllers\TaskController@UpdateTaskCompleted');
