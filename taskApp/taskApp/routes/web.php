@@ -2,17 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,17 +16,27 @@ $data = App\Models\Task::all();
 
 });
  
-// Route::get('/about-us', function(){
-//     return view('aboutus');
-// });
+// Directly call the view
+Route::get('/about', function(){
+    return view('aboutus');
+});
+
+// Directly call the view
+Route::get('/contact', function(){
+    return view('contactus');
+});
+
+Route::get('/login', function(){
+    echo " MK Builders ";
+});
     
-Route::get('/about-us','App\Http\Controllers\PageController@indexaboutus');
+Route::get('/about-us','App\Http\Controllers\PageController@index_aboutus');
 // same rout output using controller instead of use routes directly 
 
 
-Route::get('/contact-us','App\Http\Controllers\PageController@indexcontactus');
+Route::get('/contact-us','App\Http\Controllers\PageController@index_contactus');
 // same rout output using controller instead of use routes directly 
 
-Route::post('/savetask', 'App\Http\Controllers\TaskController@indexstore');
+Route::post('/savetask', 'App\Http\Controllers\TaskController@store');
 
 Route::get('/markascompleted/{id}','App\Http\Controllers\TaskController@UpdateTaskCompleted');

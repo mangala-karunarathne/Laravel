@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Mk Tuty Educational Institute</h1>
+        <h1>Mk Tuty Educational Institute - About Page</h1>
     </div>
 </body>
 </html>

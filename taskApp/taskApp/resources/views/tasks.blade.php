@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Tasks</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <style>
       .container{
       position: absolute;
@@ -34,7 +34,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="text">
+        <div class="text-center">
             <h2> Daily Tasks</h2>
         </div>
     </div>
@@ -42,6 +42,18 @@
     <div class="container1">
       <div class="rows">
         <div class="col-md-12">
+          
+
+        <!-- @error('task')
+        <span class="text-danger">{{$message}}</span>
+        @enderror -->
+
+          @foreach($errors->all() as $error)
+            <div class="alert alert-danger" role="alert">
+                {{$error}}
+            </div>
+          @endforeach
+
           <form method="post" action="/savetask">
           {{csrf_field()}}
           <input type="text" class="form-control" name="task" placeholder="Enter Your Task Here">
@@ -56,10 +68,7 @@
                 <th>ID</th>
                 <th>Task</th>
                 <th>Status</th>
-                <th>Action</th>
-                
-                
-                
+                <th>Action</th> 
                 @foreach($tasks as $task)
                     <tr>
                       <td>{{$task->id}}</td>

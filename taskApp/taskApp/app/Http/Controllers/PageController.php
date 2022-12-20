@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function indexaboutus(){
+    public function index_aboutus(){
         return view('aboutus');
     }
 
-    public function indexcontactus(){
+    public function index_contactus(){
         return view('contactus');
     }
 
