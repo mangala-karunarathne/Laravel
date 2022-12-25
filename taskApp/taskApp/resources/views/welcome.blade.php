@@ -25,6 +25,10 @@
 <body>
   <div class="center">
       <h1>Daily Task App</h1>
+      <div>
+        <a href="/tasks" class="btn btn-primary">Add Task</a>
+
+      </div>
   </div>
 
 </body>

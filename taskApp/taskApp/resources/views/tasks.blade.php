@@ -68,7 +68,7 @@
                 <th>ID</th>
                 <th>Task</th>
                 <th>Status</th>
-                <th>Action</th> 
+                <th>Action</th>  
                 @foreach($tasks as $task)
                     <tr>
                       <td>{{$task->id}}</td>

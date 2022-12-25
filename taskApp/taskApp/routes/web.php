@@ -10,10 +10,7 @@ Route::get('/', function () {
 
 Route::get('/tasks', function(){
 $data = App\Models\Task::all();
-
-    return view('tasks')->with('tasks',$data);
-
-
+return view('tasks')->with('tasks',$data);
 });
  
 // Directly call the view
@@ -39,4 +36,4 @@ Route::get('/contact-us','App\Http\Controllers\PageController@index_contactus');
 
 Route::post('/savetask', 'App\Http\Controllers\TaskController@store');
 
-Route::get('/markascompleted/{id}','App\Http\Controllers\TaskController@UpdateTaskCompleted');
+Route::get('/markascompleted/{id}','App\Http\Controllers\TaskController@UpdateTaskAsCompleted');
