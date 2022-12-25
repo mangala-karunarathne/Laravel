@@ -48,4 +48,13 @@ class TaskController extends Controller
         return redirect()->back();
 
    }
+   public function UpdateTaskAsNotCompleted($id){
+
+        $task_to_b_not_complete=Task::find($id);
+        $task_to_b_not_complete->iscompleted=0;
+        $task_to_b_not_complete->save();
+        // Back to the same view again
+        return redirect()->back();
+
+   }
 } 
