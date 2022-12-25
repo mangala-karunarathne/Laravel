@@ -87,6 +87,7 @@
                         <a href="/markascompleted/{{$task->id}}" class="btn btn-primary">Mark As Completed</a>
                         @endif
                         <a href="/deletetask/{{$task->id}}" class="btn btn-light">Delete</a>
+                        <a href="/updatetask/{{$task->id}}" class="btn btn-secondary">Update</a>
                       </td>
                     </tr>
                 @endforeach

@@ -61,10 +61,18 @@ class TaskController extends Controller
    public function DeleteTask($id){
 
         $task_to_b_delete=Task::find($id);
-        // $task_to_b_delete->iscompleted=0;
         $task_to_b_delete->delete();
         // Back to the same view again
         return redirect()->back();
+
+   }
+
+   public function UpdateTaskView($id){
+
+        $task_to_b_update=Task::find($id);
+        
+        // Back to the same view again
+        return view('updateTask')->with('taskData', $task_to_b_update);
 
    }
 
