@@ -23,9 +23,10 @@
 </head>
 <body>
     <div class="container">
-        <form action="#" method="post">
+        <form action="/tasks" method="post">
+            {{csrf_field()}}
             <input type="text" class="form-control" name="updatetask" value="{{$taskData->task}}"/>
-            <input type="hidden" name="id" value="{{$taskData->id}}"/>
+            <input type="hidden" name="update_id" value="{{$taskData->id}}"/>
             <br>
             <br>
             <input type="submit" class="btn btn-secondary" value="Update"/>

@@ -8,29 +8,7 @@ use App\Models\Task;
 
 class TaskController extends Controller
 {
-   public function Store(Request $request){
-    //    dd($request->all());
-
-    // Creating new object from Task Model and take as variable called task
-    $task=new Task;
-    $this->validate($request,[
-        'task'=>'required|max:100|min:5',
-    ]);
-
    
-
-    $task->task=$request->task;
-    $task->save();
-    // return back to same route
-    return redirect()->back();
-
-    // here data can be any name and it's just a variable to retrieve the data
-    $data=Task::all(); 
-    dd($data);
-
-    return view('tasks')->with('tasks',$data);
-   }
-
    public function UpdateTaskAsCompleted($id){
 
 //     $task=DB::table('tasks')->where('id',$id)->get();
@@ -75,5 +53,43 @@ class TaskController extends Controller
         return view('updateTask')->with('taskData', $task_to_b_update);
 
    }
+
+   public function UpdateTask(Request $request){
+
+        // dd($request);
+        $id=$request->update_id;
+        $task=$request->updatetask;
+        $data=Task::find($id);
+        $data->task=$task;
+        $data->save();
+        $data=Task::all();
+
+        // Back to the task view
+        return view('tasks')->with('tasks',$data);
+   }
+
+   public function Store(Request $request){
+    //    dd($request->all());
+
+    // Creating new object from Task Model and take as variable called task
+    $task=new Task;
+    $this->validate($request,[
+        'task'=>'required|max:100|min:5',
+    ]);
+
+   
+
+    $task->task=$request->task;
+    $task->save();
+    // return back to same route
+    return redirect()->back();
+
+    // here data can be any name and it's just a variable to retrieve the data
+    $data=Task::all(); 
+    dd($data);
+
+    return view('tasks')->with('tasks',$data);
+   }
+
 
 } 

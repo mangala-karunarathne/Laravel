@@ -43,11 +43,6 @@
       <div class="rows">
         <div class="col-md-12">
           
-
-        <!-- @error('task')
-        <span class="text-danger">{{$message}}</span>
-        @enderror -->
-
           @foreach($errors->all() as $error)
             <div class="alert alert-danger" role="alert">
                 {{$error}}
