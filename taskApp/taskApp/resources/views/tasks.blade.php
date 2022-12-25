@@ -10,7 +10,7 @@
       position: absolute;
       top: 1%;
       left:20%;
-      width: 100%;
+      right:20%
       text-align: center;
       font-size: 18px;
       margin: auto;
@@ -21,12 +21,12 @@
     .container1{
       position: absolute;
       top: 10%;
-      left:25%;
-      width: 100%;
+      left:10%;
+      right:10%;
       text-align: center;
       font-size: 18px;
       margin: 10px;
-      width: 50%;
+      width: 80%;
       /*border: 3px solid #73AD21; */
       padding: 10px;
     }
@@ -86,6 +86,7 @@
                         @else
                         <a href="/markascompleted/{{$task->id}}" class="btn btn-primary">Mark As Completed</a>
                         @endif
+                        <a href="/deletetask/{{$task->id}}" class="btn btn-light">Delete</a>
                       </td>
                     </tr>
                 @endforeach
